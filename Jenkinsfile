@@ -1,7 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'hello-world' 
+            image 'hello-world'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
     stages {
